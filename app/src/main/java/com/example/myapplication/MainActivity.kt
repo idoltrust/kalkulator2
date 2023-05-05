@@ -105,6 +105,6 @@ open class MainActivity : AppCompatActivity() {
     }
     private fun pereopr_numb(but:String, number:TextView):String{
         return number.text.toString()+but
-    }
+    }//ertyukmnbv
 }
 
