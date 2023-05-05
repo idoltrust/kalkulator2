@@ -21,5 +21,6 @@ class but(var Arg1_:Int = 0, var Arg2_ :Int = 0){
         else{val otv:Int = Arg1_/Arg2_
             return "$otv"
         }
+        //1243567
     }
 }
