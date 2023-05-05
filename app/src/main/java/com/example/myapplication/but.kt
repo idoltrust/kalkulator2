@@ -1,33 +1,34 @@
-import com.example.myapplication.MainActivity
+package com.example.myapplication
 
-class Calkulate(val UP:Int, val DOWN:Int,val Operation:String): MainActivity(){
-    fun opred(){
+class Calculate(private val UP:Int, private val DOWN:Int, private val Operation:String): MainActivity(){
+    fun oped():String{
+        var rect = ""
         when(Operation){
-            "+"->add()
-            "-"->subtr()
-            "*"->mul()
-            "/"->divide()
+            "+"->rect =add()
+            "-"->rect =subtree()
+            "*"->rect =mul()
+            "/"->rect =divide()
         }
+        return rect
     }
-    fun add ():String{
+    private fun add ():String{
         val result = UP+DOWN
         return result.toString()
     }
-    fun subtr():String{
+    private fun subtree():String{
         val result = UP-DOWN
         return result.toString()
     }
-    fun mul():String{
+    private fun mul():String{
         val result = UP*DOWN
         return result.toString()
     }
-    fun divide():String{
-        if (DOWN.toInt()<0){
-            return "Нельзя делить на 0"
-        }
-        else{
+    private fun divide():String{
+        return if (DOWN==0){
+            "Нельзя делить на 0"
+        } else{
             val result = UP/DOWN
-            return result.toString()
+            result.toString()
         }
     }
 }

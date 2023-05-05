@@ -5,6 +5,7 @@
     android:id="@+id/t"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TableLayout
@@ -90,7 +91,8 @@
         android:layout_height="29dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="24dp"
-        android:text="TextView"
+        android:allowUndo="false"
+        android:background="#E4DEDE"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/Operation"
@@ -169,7 +171,8 @@
         android:id="@+id/Operation"
         android:layout_width="160dp"
         android:layout_height="33dp"
-        android:text="TextView"
+        android:background="#E1DCDC"
+        android:text="+"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,7 +186,7 @@
         android:id="@+id/DOWN"
         android:layout_width="160dp"
         android:layout_height="36dp"
-        android:text="TextView"
+        android:background="#DDD6D6"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -197,10 +200,15 @@
         android:id="@+id/Result"
         android:layout_width="151dp"
         android:layout_height="30dp"
+        android:background="#F3EFEF"
         android:text="Result"
         android:textAlignment="center"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="328dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toEndOf="@+id/Operation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
 
 </android.support.constraint.ConstraintLayout>

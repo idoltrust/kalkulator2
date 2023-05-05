@@ -1,8 +1,8 @@
 package com.example.myapplication
-import Calkulate
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+
 open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +32,7 @@ open class MainActivity : AppCompatActivity() {
         val num9:Button = findViewById(R.id.number9)
         val num0:Button = findViewById(R.id.number0)
 
-        var position:Boolean =true
+        var position =true
         UP.setOnClickListener { position=true }
         DOWN.setOnClickListener { position=false }
 
@@ -41,24 +41,70 @@ open class MainActivity : AppCompatActivity() {
         mul.setOnClickListener {Operation.text = "*"}
         divide.setOnClickListener {Operation.text = "/"}
         CALK.setOnClickListener {
-            result.text = Calkulate(arg1(UP),arg2(DOWN),opred(Operation)).opred().toString()}
+            if(UP.text.toString()=="" || DOWN.text.toString()==""){result.text = "Пустое поле"}
+            else{result.text = Calculate(arg1(UP),arg2(DOWN),deist(Operation)).oped()}
+            }
+
+
+        num0.setOnClickListener {
+            if (position){UP.text = pereopr_numb("0",UP)}
+            else{DOWN.text = pereopr_numb("0",DOWN)}
+        }
+        num1.setOnClickListener {
+            if (position){UP.text = pereopr_numb("1",UP)}
+            else{DOWN.text = pereopr_numb("1",DOWN)}
+        }
+        num2.setOnClickListener {
+            if (position){UP.text = pereopr_numb("2",UP)}
+            else{DOWN.text = pereopr_numb("2",DOWN)}
+        }
+        num3.setOnClickListener {
+            if (position){UP.text = pereopr_numb("3",UP)}
+            else{DOWN.text = pereopr_numb("3",DOWN)}
+        }
+        num4.setOnClickListener {
+            if (position){UP.text = pereopr_numb("4",UP)}
+            else{DOWN.text = pereopr_numb("4",DOWN)}
+        }
+        num5.setOnClickListener {
+            if (position){UP.text = pereopr_numb("5",UP)}
+            else{DOWN.text = pereopr_numb("5",DOWN)}
+        }
+        num6.setOnClickListener {
+            if (position){UP.text = pereopr_numb("6",UP)}
+            else{DOWN.text = pereopr_numb("6",DOWN)}
+        }
+        num7.setOnClickListener {
+            if (position){UP.text = pereopr_numb("7",UP)}
+            else{DOWN.text = pereopr_numb("7",DOWN)}
+        }
+        num8.setOnClickListener {
+            if (position){UP.text = pereopr_numb("8",UP)}
+            else{DOWN.text = pereopr_numb("8",DOWN)}
+        }
+        num9.setOnClickListener {
+            if (position){UP.text = pereopr_numb("9",UP)}
+            else{DOWN.text = pereopr_numb("9",DOWN)}
+        }
+
+
 
         C_UP.setOnClickListener {UP.text = ""}
         C_DOWN.setOnClickListener {DOWN.text = ""}
         }
 
-    fun arg1 (UP:TextView):Int {
-        val Arg1 = UP.getText().toString().toInt()
-        return Arg1
+    private fun arg1(UP: TextView): Int {
+        return UP.text.toString().toInt()
     }
 
-    fun arg2 (DOWN:TextView):Int {
-        val Arg2 = DOWN.getText().toString().toInt()
-        return Arg2
+    private fun arg2(DOWN: TextView): Int {
+        return DOWN.text.toString().toInt()
     }
-    fun opred (Operation:TextView):String {
-        val Arg2 = Operation.getText().toString()
-        return Arg2
+    private fun deist(Operation: TextView): String {
+        return Operation.text.toString()
+    }
+    private fun pereopr_numb(but:String, number:TextView):String{
+        return number.text.toString()+but
     }
 }
 
