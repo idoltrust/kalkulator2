@@ -1,7 +1,6 @@
-package com.example.myapplication
-import android.widget.EditText
+import com.example.myapplication.MainActivity
 
-class but(var Arg1_:Int = 0, var Arg2_ :Int = 0){
+class but(var Arg1_:Int = 0, var Arg2_ :Int = 0): MainActivity(){
     fun add ():String{
         val otv:Int = Arg1_+Arg2_
         return "$otv"

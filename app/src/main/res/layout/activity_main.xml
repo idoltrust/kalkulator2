@@ -2,94 +2,194 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/t"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="179dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/tableLayout2"
+        android:layout_width="265dp"
+        android:layout_height="148dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Add"
+                android:id="@+id/number1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add" />
+                android:text="1" />
 
             <Button
-                android:id="@+id/subtr"
+                android:id="@+id/numder2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/number3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="subtr" />
+                android:text="3" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="70dp">
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/mul"
+                android:id="@+id/number4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="mul" />
+                android:text="4" />
 
             <Button
-                android:id="@+id/divide"
+                android:id="@+id/number5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="divide" />
+                android:text="5" />
+
+            <Button
+                android:id="@+id/number6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/number7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/number8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/number9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9" />
+        </TableRow>
     </TableLayout>
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:ems="10"
-        android:hint="@string/app_name"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/Up"
+        android:layout_width="162dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Operation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:ems="10"
-        android:hint="@string/app_name"
-        android:inputType="number"
-        android:minHeight="48dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="86dp"
+        android:layout_height="346dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/Add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/subtr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="subtr" />
+
+        <Button
+            android:id="@+id/mul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mul" />
+
+        <Button
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="divide"
+            tools:layout_editor_absoluteX="216dp"
+            tools:layout_editor_absoluteY="683dp" />
+
+        <Button
+            android:id="@+id/C_UP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C_UP" />
+
+        <Button
+            android:id="@+id/C_DOWN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C_DOWN" />
+
+        <Button
+            android:id="@+id/CALK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALK" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/number0"
+        android:layout_width="51dp"
+        android:layout_height="148dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toEndOf="@+id/tableLayout2" />
 
     <TextView
-        android:id="@+id/text"
-        android:layout_width="214dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="101dp"
+        android:id="@+id/Operation"
+        android:layout_width="160dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="284dp"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DOWN"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 
 </android.support.constraint.ConstraintLayout>
