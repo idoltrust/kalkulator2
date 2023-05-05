@@ -1,25 +1,19 @@
 import com.example.myapplication.MainActivity
 
-class but(var Arg1_:Int = 0, var Arg2_ :Int = 0): MainActivity(){
-    fun add ():String{
-        val otv:Int = Arg1_+Arg2_
-        return "$otv"
+class Calkulate(val UP:String, val DOWN:String,val Operation:String): MainActivity(){
+    while("$Operation"){
+
     }
-    fun subtr ():String{
-        var otv:Int = Arg1_-Arg2_
-        return "$otv"
+    fun add (){
+
     }
-    fun mul ():String{
-        var otv:Int = Arg1_*Arg2_
-        return "$otv"
+    fun subtr(){
+
     }
-    fun divide ():String{
-        if(Arg2_ == 0){
-            return "Div by zero"
-        }
-        else{val otv:Int = Arg1_/Arg2_
-            return "$otv"
-        }
-        //1243567
+    fun mul(){
+
+    }
+    fun divide(){
+
     }
 }

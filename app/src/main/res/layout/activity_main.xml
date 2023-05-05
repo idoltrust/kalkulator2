@@ -25,7 +25,7 @@
                 android:text="1" />
 
             <Button
-                android:id="@+id/numder2"
+                android:id="@+id/number2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="2" />
@@ -96,7 +96,7 @@
         app:layout_constraintBottom_toTopOf="@+id/Operation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.981" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -169,14 +169,15 @@
         android:id="@+id/Operation"
         android:layout_width="160dp"
         android:layout_height="33dp"
-        android:layout_marginTop="284dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
 
     <TextView
         android:id="@+id/DOWN"
@@ -187,9 +188,19 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="151dp"
+        android:layout_height="30dp"
+        android:text="Result"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="328dp" />
 
 </android.support.constraint.ConstraintLayout>
