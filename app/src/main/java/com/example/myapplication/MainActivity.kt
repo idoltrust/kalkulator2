@@ -1,4 +1,5 @@
 package com.example.myapplication
+import Calkulate
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -39,6 +40,8 @@ open class MainActivity : AppCompatActivity() {
         subtr.setOnClickListener { Operation.text = "-"}
         mul.setOnClickListener {Operation.text = "*"}
         divide.setOnClickListener {Operation.text = "/"}
+        CALK.setOnClickListener {
+            result.text = Calkulate(arg1(UP),arg2(DOWN),opred(Operation)).opred().toString()}
 
         C_UP.setOnClickListener {UP.text = ""}
         C_DOWN.setOnClickListener {DOWN.text = ""}
@@ -51,6 +54,10 @@ open class MainActivity : AppCompatActivity() {
 
     fun arg2 (DOWN:TextView):Int {
         val Arg2 = DOWN.getText().toString().toInt()
+        return Arg2
+    }
+    fun opred (Operation:TextView):String {
+        val Arg2 = Operation.getText().toString()
         return Arg2
     }
 }
